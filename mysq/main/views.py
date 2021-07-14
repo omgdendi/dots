@@ -12,12 +12,24 @@ def main(request):
     if request.method == 'POST':
         form = DotsForm(request.POST)
         if form.is_valid():
-            form.save()
+            new_form = form.save(commit=False)
+            x = form.cleaned_data['x_value']
+            y = form.cleaned_data['y_value']
+            r = float(form.cleaned_data['r_value'])
+            flag = False
+            if (x >= 0) and (y <= 0) and (x <= r) and (y >= r/2):
+                flag = True
+            elif (x < 0) and (y <= 0) and (y >= -(x+r)):
+                flag = True
+            elif (x > 0) and (y > 0) and (x**2 + y**2 <= r**2):
+                flag = True
+            new_form.result = flag
+            new_form.save()
         else:
             error = 'Вы ввели неверные значения'
 
     form = DotsForm()
-    dots = Dots.objects.all()
+    dots = Dots.objects.order_by('-id')
     data = {
         'form': form,
         'error': error,
