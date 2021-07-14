@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}Авторизация{% endblock %}
+
+{% block content %}
+<div class="row" style="margin-bottom: 300px; margin-top:180px">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">Авторизация</h3>
+        <hr>
+        <span class="login-form">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.username }}<br/><br/>
+            {{ form.password }}<br/><br/>
+            <input type="submit" class="btn btn-success" value="Войти">
+        </form>
+        </span>
+    </div>
+</div>
+{% endblock %}

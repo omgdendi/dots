@@ -1,0 +1,84 @@
+body {
+    color: silver;
+    font-family: Arial;
+}
+
+.header {
+    background: #3d3c66;
+    height: 70px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.content {
+    min-height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content-input {
+    min-height: 700px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.schedule {
+    background: aliceblue;
+    min-height: 345px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    background: #3d3c66;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shedule-value {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 220px;
+    weight: 220px;
+}
+
+.input {
+    background: aliceblue;
+    min-height: 345px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-value {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-div {
+    background: aliceblue;
+    min-height: 500px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+}
